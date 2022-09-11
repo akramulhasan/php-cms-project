@@ -16,7 +16,7 @@ echo $id;
     <form action="" method="post">
       <dl>
         <dt>Menu Name</dt>
-        <dd><input type="text" name="menu_name" value="" /></dd>
+        <dd><input type="text" name="menu_name" value="<php echo $menu_name" /></dd>
       </dl>
       <dl>
         <dt>Position</dt>

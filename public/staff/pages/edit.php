@@ -27,7 +27,6 @@ if(is_post_request()){
 ?>
 
 <div id="content">
-
   <a class="back-link" href="<?php echo url_for('/staff/pages/index.php'); ?>">&laquo; Back to List</a>
 
   <div class="subject new">

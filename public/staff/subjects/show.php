@@ -1,13 +1,20 @@
 <?php
 require_once("../../../private/initialize.php");
 
-// $id = isset($_GET['id']) ? $_GET['id'] : '1';
 $id = $_GET['id'] ?? '1'; // PHP > 7.0
+$subject = get_subject_by_id($id);
 
-echo h($id);
 
 ?>
-<h2>Hello</h2>
-<a href="show.php?name=<?php echo u('John Doe'); ?>">Link1</a><br />
-<a href="show.php?company=<?php echo u('Widgets&More'); ?>">Link2</a><br />
-<a href="show.php?query=<?php echo u('!#*?'); ?>">Link3</a><br />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subject Details</title>
+</head>
+<body>
+  <h2>Subject Title: <?php echo h($subject['menu_name']) ?></h2>
+</body>
+</html>

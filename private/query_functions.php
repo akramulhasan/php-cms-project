@@ -31,4 +31,26 @@ function get_subject_by_id($id){
   return $subject; //Returns as assoc array
 }
 
+function create_subject($menu_name, $position, $visible){
+  global $db;
+  $sql  = "INSERT into subjects ";
+  $sql .= "(menu_name, position, visibility) ";
+  $sql .= "values( ";
+  $sql .= "'".$menu_name."',";
+  $sql .= "'".$position."',";
+  $sql .= "'".$visible."'";
+  $sql .= ")";
+
+  $result = mysqli_query($db, $sql);
+  //For INSERT statement $result is True/False
+
+  if($result){
+    return true;
+  }else{
+    echo mysqli_error($db);
+    db_disconnect($db);
+    exit;
+  }
+}
+
 ?>

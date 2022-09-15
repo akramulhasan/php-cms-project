@@ -31,14 +31,14 @@ function get_subject_by_id($id){
   return $subject; //Returns as assoc array
 }
 
-function create_subject($menu_name, $position, $visible){
+function create_subject($subject){
   global $db;
   $sql  = "INSERT into subjects ";
   $sql .= "(menu_name, position, visibility) ";
   $sql .= "values( ";
-  $sql .= "'".$menu_name."',";
-  $sql .= "'".$position."',";
-  $sql .= "'".$visible."'";
+  $sql .= "'".$subject['menu_name']."',";
+  $sql .= "'".$subject['position']."',";
+  $sql .= "'".$subject['visibility']."'";
   $sql .= ")";
 
   $result = mysqli_query($db, $sql);

@@ -1,7 +1,7 @@
 <?php
 require_once("../../../private/initialize.php");
 
-$id = $_GET['id'] ?? '1'; // PHP > 7.0
+$id = $_GET['id'] ?? '1'; // PHP > 7.0 vertion
 $subject = get_subject_by_id($id);
 
 

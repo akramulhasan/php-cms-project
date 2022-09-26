@@ -13,7 +13,7 @@ mysqli_free_result($subject_set);
 $menu_name = $position = $visible = '';
 
 if(is_post_request()){
-// Handle form values sent by new.php
+// Handle form values sent by new.php file
 
   $subject = [];
   $subject['id'] = $id;
